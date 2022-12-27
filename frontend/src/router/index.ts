@@ -11,7 +11,7 @@ const router = createRouter({
       path: "/panel",
       name: "panel",
       component: Panel,
-      meta: { auth: false }
+      meta: { auth: true }
     },
     {
       path: "/",
