@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggleIcon {
+  @apply pointer-events-auto w-8 h-10
+}
+
+.wh-fit {
+  @apply w-fit h-fit
+}
+
+@layer base {
+    @font-face {
+      font-family: Fira Sans;
+      font-weight: 400;
+      src: url(/Fira_Sans/FiraSans-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: Fira Sans;
+    font-weight: 500;
+    src: url(/Fira_Sans/FiraSans-Medium.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: Fira Sans;
+    font-weight: 600;
+    src: url(/Fira_Sans/FiraSans-SemiBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: Fira Sans;
+    font-weight: 700;
+    src: url(/Fira_Sans/FiraSans-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: Fira Sans;
+    font-weight: 800;
+    src: url(/Fira_Sans/FiraSans-ExtraBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: Fira Sans;
+    font-weight: 900;
+    src: url(/Fira_Sans/FiraSans-Black.ttf) format("truetype");
+  }
+}

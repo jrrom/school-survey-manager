@@ -1,0 +1,77 @@
+## Frontend
+
+# Logs
+frontend/pnpm-lock.yaml
+frontend/logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+frontend/node_modules
+frontend/.DS_Store
+frontend/dist
+frontend/dist-ssr
+frontend/coverage
+frontend/*.local
+
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+
+# Editor directories and files
+frontend/.vscode
+frontend/.idea
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
+frontend/*.sw?
+
+## Server
+
+# output
+server/surveys/*
+server/dist
+server/node_modules
+
+# Logs
+server/pnpm-lock.yaml
+server/logs
+server/*.log
+server/npm-debug.log*
+server/pnpm-debug.log*
+server/yarn-debug.log*
+server/yarn-error.log*
+server/lerna-debug.log*
+
+# OS
+server/.DS_Store
+
+# Tests
+server/coverage
+server/.nyc_output
+
+# IDEs and editors
+server/.idea
+server/.project
+server/.classpath
+server/.c9/
+server/*.launch
+server/.settings/
+server/*.sublime-workspace
+
+# IDE - VSCode
+server/.vscode
+
+## Project
+
+# Editor directories and files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
