@@ -16,6 +16,7 @@ The U.I is also responsive and works well on mobile.
 - Start Vue and Nest separately
 
 ## Showcase
+Video - https://youtu.be/xu-iXoNXQVI
 
 ### Login Screen
 ![Screenshot from 2022-12-27 13-42-29](https://user-images.githubusercontent.com/77691121/209635492-c7de904c-45df-4378-a818-f41811804df3.png)
