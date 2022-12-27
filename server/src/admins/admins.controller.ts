@@ -15,11 +15,6 @@ export class AdminsController {
     return this.adminsService.login(loginAdminDto);
   }
 
-  @Post('forgot/:id')
-  forgot(@Param('id') id: string) {
-    return this.adminsService.forgot(id)
-  }
-
   @UseGuards(JwtAuthGuard)
   @Post('create')
   create(@Body() createAdminDto: CreateAdminDto) {

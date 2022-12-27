@@ -45,17 +45,6 @@ const handleSubmit = (): void => {
   });
 }
 
-const forgotPassword = (): void => {
-  let user = prompt("Enter your username.") as string;
-  console.log(user);
-  axios
-    .post(window.location.origin + "/api/admins/forgot/" + user)
-    .catch(err => {
-      alert(err.response.data.message);
-      console.error(err);
-    })
-}
-
 </script>
 
 <template>
@@ -80,7 +69,6 @@ const forgotPassword = (): void => {
       </div>
 
       <input type="submit" value="Submit" class="rounded-full p-3 w-48 bg-lime-400/60 mb-8">
-      <button type="button" class="rounded-full p-3 w-80 bg-teal-400/60 mb-36" @click="forgotPassword()"> Forgot Password? </button>
     </form>
     <div v-show="error" id="errors"
          class="absolute mt-96 w-3/4 sm:w-1/2 p-1 sm:p-3 bg-rose-500/70 text-white justify-center items-center">
