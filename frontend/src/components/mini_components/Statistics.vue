@@ -8,6 +8,7 @@ const surveyStore      = useSurveyStore();
 const options          = (await surveyStore.getOptions(statisticsStore.surveyId))?.data;
 const survey: any      = (await surveyStore.getSurvey(statisticsStore.surveyId))?.data;
 const sections         = (JSON.parse(survey.value)).itemList;
+console.log(sections[0].options)
 
 function getImage(option: any) {
   let hi = ((JSON.parse(option.survey.value)).itemList.filter((x: any, y: any) => {
@@ -53,12 +54,14 @@ function getImage(option: any) {
             Type:</span> {{ section.type }} <br>
         </h3>
         <div v-for="option in options" class="border-2 border-sky-300">
-          <p class="bg-sky-100 border-y-2 border-sky-300 p-2 -mt-2"> Title: {{ option.title }}</p> 
-          <p class="bg-white pl-2 pt-4"> I.D: <span class="text-gray-600 text-sm"> {{ option.id }} </span></p> 
-          <p class="bg-white pl-2"> Image: 
-            {{ getImage(option) }} 
-          </p> 
-          <p class="bg-white pl-2 pb-4"> Votes: {{ option.value }}</p> 
+          <span v-if="section.title === option.section">
+            <p class="bg-sky-100 border-y-2 border-sky-300 p-2 -mt-2"> Title: {{ option.title }}</p> 
+            <p class="bg-white pl-2 pt-4"> I.D: <span class="text-gray-600 text-sm"> {{ option.id }} </span></p> 
+            <p class="bg-white pl-2"> Image: 
+              {{ getImage(option) }} 
+            </p> 
+            <p class="bg-white pl-2 pb-4"> Votes: {{ option.value }}</p> 
+          </span>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@
     // @ts-ignore
     surveyCreateStore.getElement(order).options[index].image = event.target.files[0].name;
     //@ts-ignore
-    surveyCreateStore.images[index] = event.target.files[0];
+    surveyCreateStore.addImage(event.target.files[0]);
   }
 </script>
 
@@ -62,8 +62,7 @@
     <div>
       <ul class="mt-4 ml-4">
         <li v-for="option, index in surveyCreateStore.getElement(order).options" class="flex flex-row mt-4">
-          <input type="file" name="image" id="upload" class="w-60 hidden" @change="fileInput($event, order, index)" />
-          <label for="upload" class="bg-lightpur hover:bg-darkpur p-2 text-white rounded"> Upload </label>
+          <input type="file" name="image" id="upload" class="w-60" @change="fileInput($event, order, index)" />
           <input type="text" size="1" 
                  class="w-full border-2 border-sky-400 rounded-lg focus:outline-none 
                         pl-2 decoration-sky-500 mx-2" 

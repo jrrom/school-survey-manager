@@ -52,7 +52,7 @@ function submit(event: Event) {
         <h2 class="bg-gray-100 border-gray-300 text-4xl mb-4 p-2"> {{ item.title }} </h2>
         <div v-for="option in item.options"
             class="flex flex-row text-xl pl-4 items-center">
-          <img v-if="option.image" :src="repeated + option.image" width="64" height="64" class="mr-5 mb-8"/>
+          <img v-if="option.image" :src="repeated + (option.image).replace(/\s/g, '-')" width="64" height="64" class="mr-5 mb-8"/>
           <input v-if="item.type === 'checkbox'" :id="option.id" :type="item.type" :name="option.id" />
           <input v-if="item.type === 'radio'" :id="option.id" :type="item.type" :name="String(index)" :value="option.id" />
           <label :for="option.id" class="ml-2"> <span> {{ option.value }} </span> </label>

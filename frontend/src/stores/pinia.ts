@@ -575,13 +575,16 @@ const useSurveyCreateStore = defineStore({
   id: "surveycreate",
   state: () => ({
     active: false,
-    images: [],
+    images: [] as any[],
     title: "",
     survey: new s.Survey([])
   }),
   actions: {
     toggleActive(): void {
       this.active = !this.active;
+    },
+    addImage(image: any): void {
+      this.images.push(image)
     },
     getActive(): boolean {
       return this.active;

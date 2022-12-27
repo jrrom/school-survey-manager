@@ -13,7 +13,7 @@ export class Admin {
   })
   user: string
 
-  @PrimaryColumn({
+  @Column({
     name: 'email',
     type: 'varchar',
     length: 64,

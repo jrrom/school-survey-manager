@@ -33,7 +33,7 @@ export class SurveysController {
         storage: diskStorage({
           destination: './surveys/',
           filename: (req, file, cb) => {
-            const filename: string  = path.parse(file.originalname).name.replace(/\s/g, '');
+            const filename: string  = path.parse(file.originalname).name.replace(/\s/g, '-');
             const extension: string = path.parse(file.originalname).ext;
 
             cb(null, `${filename}${extension}`)
