@@ -33,6 +33,7 @@ frontend/*.sw?
 
 # output
 server/surveys/*
+!server/surveys/.gitkeep
 server/dist
 server/node_modules
 
